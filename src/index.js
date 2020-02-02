@@ -1,21 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import './estilos/styles.css';
+import Titulo from './component/Titulo';
+import Button from './component/Button';
+import './styles/styles.css';
 
-const primeiroJSX = () => {
-    return (
-        <div>
-            Brendo Rocha
-        </div>
-    )
-}
-
+const soma = (a, b) => alert( a + b );
 
 const App = () => {
     return (
         <div className='App'>
-            Hello World
-            {primeiroJSX()}
+            <Titulo titulo="Estrutura React"/>
+            <Button onClick={() => soma(5,5)} name="Somar os Valores"/>
         </div>
     )
 }
